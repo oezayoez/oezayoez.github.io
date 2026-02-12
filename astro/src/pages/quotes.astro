@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+
+<Layout title="Quotes">
+    <main>
+        <article>
+            <h1>Quotes</h1>
+
+            <!-- Statistics Quotes -->
+            <h2>Some funny quotes i wrote down, mostly from my professors</h2>
+            <div id="stats-quotes"></div>
+
+            <!-- Personal Quotes -->
+            <h2>Personal Quotes (German)</h2>
+            <div id="personal-quotes"></div>
+        </article>
+    </main>
+
+    <script>
+
+        const statsQuotes = [
+            "You should always use common sense if you do applied statistics. First rule of the game",
+            "We are doing kitchen statistics, not cozy stuff anymore",
+            "There was a smart guy Akaike, he invented something and named it AIC. Later he invented something again but A was gone so he called it BIC",
+            "Rejecting What you want is a dangerous game",
+            "In real life you dont care, looking with your eyes is better",
+            "This is the so called partial Likelihood for Cox regression which is not a likelihood at all"]
+
+        const personalQuotes = [
+            "Ich habe geträumt das ich was wichtiges gelöscht habe und hab dann ganze zeit cmd+z, cmd+z gerufen",
+            "hudu minus ist gleich hudu plus - The integral of [h(u) du] was meant",
+            "Zahl der Großen Zahl",
+            "Versteckte Marktkauf Ketten",]
+
+        const renderQuotes = (containerId, quotesArray) => {
+            const container = document.getElementById(containerId);
+            quotesArray.forEach(quote => {
+                const p = document.createElement('p');
+                p.textContent = "- " + quote;
+                container.appendChild(p);
+            });
+        };
+
+        renderQuotes('stats-quotes', statsQuotes);
+        renderQuotes('personal-quotes', personalQuotes);
+
+
+    </script>
+
+    <style>
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: system-ui, sans-serif;
+            line-height: 1.6;
+        }
+
+        article {
+            margin-top: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            text-align: left;
+            color: #333;
+        }
+
+        #stats-quotes p,
+        #personal-quotes p {
+            margin: 8px 0;
+        }
+    </style>
+</Layout>
