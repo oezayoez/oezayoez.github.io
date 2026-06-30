@@ -20,6 +20,10 @@ const fullTitle = title ? `${title} | ${siteName}` : siteName;
 
 	<meta name="generator" content={Astro.generator} />
 	<title>{fullTitle}</title>
+
+	<!-- Cloudflare Web Analytics -->
+		<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "496e878da68f431d8649d39f033eccc0"}'></script>
+	<!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 <Navigation />
