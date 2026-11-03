@@ -17,7 +17,7 @@ about:
 
 ---
 
-Hi, im Özay (the z is spelled like an s)
+Hi, im Özay 
 
 Im currently a masters student and very interested in doubly stochastic processes and their connections to survival analysis, including phase-type distributions, multistate models and also related stochastic processes. 
 
