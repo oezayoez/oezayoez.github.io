@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Özay Öztürk"
+  favicon: resources/web-app-manifest-192x192.png
   site-url: https://oezay.dev
   description: "Statistics and data"
   navbar:
