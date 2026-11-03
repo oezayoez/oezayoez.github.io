@@ -9,6 +9,12 @@ about:
     - icon: envelope
       text: Email
       href: mailto:oeztuerk@oezay.dev
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/ooez.bsky.social
+    - icon: linkedin
+      text: Linkedin
+
 ---
 
 Hi, im Özay (the z is spelled like an s)

@@ -11,10 +11,11 @@ website:
         text: Home
       - href: blog/index.qmd
         text: Blog
-      - icon: rss
-        href: blog/index.xml
       - href: quotes.qmd
         text: Quotes
+      - icon: rss
+        href: blog/index.xml
+
 
 format:
   html:
