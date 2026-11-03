@@ -1,8 +1,6 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
   # Schedule: 9 times per hour
@@ -11,25 +9,48 @@ on:
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto site
+        run: quarto render site
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          path: astro
-          node-version: '22'# The root location of your Astro project inside the repository. (optional)
-          # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-          # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          node-version: 22
+          cache: npm
+          cache-dependency-path: astro/package-lock.json
+
+      - name: Build Astro (calculator)
+        working-directory: astro
+        run: |
+          npm ci
+          npm run build
+
+      - name: Merge Astro into Quarto output (Quarto wins on conflicts)
+        run: rsync -a --ignore-existing astro/dist/ site/_site/
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/_site
 
   deploy:
     needs: build

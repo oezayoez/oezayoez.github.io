@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Özay Öztürk"
-  site-url: https://oezayoez.github.io
+  site-url: https://oezay.dev
   description: "Statistics and data"
   navbar:
     right:
