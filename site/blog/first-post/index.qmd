@@ -1,0 +1,9 @@
+---
+title: "Starting things"
+date: 2026-11-03
+# categories: [statistics]
+---
+
+# Nothing to see here yet
+
+Might write some cool stuff here in the future

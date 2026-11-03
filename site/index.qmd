@@ -1,0 +1,18 @@
+---
+title: "Özay Öztürk"
+about:
+  template: trestles
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/oezayoez
+    - icon: envelope
+      text: Email
+      href: mailto:oeztuerk@oezay.dev
+---
+
+Hi, im Özay (the z is spelled like an s)
+
+Im currently a masters student and very interested in doubly stochastic processes and their connections to survival analysis, including phase-type distributions, multistate models and also related stochastic processes. 
+
+

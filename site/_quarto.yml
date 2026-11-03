@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Özay Öztürk"
+  site-url: https://oezayoez.github.io
+  description: "Statistics and data"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: blog/index.qmd
+        text: Blog
+      - icon: rss
+        href: blog/index.xml
+      - href: quotes.qmd
+        text: Quotes
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css

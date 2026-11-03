@@ -1,0 +1,23 @@
+## Some funny no-context quotes i wrote down during my studies, mostly from my professors
+
+> You should always use common sense if you do applied statistics. First rule of the game.
+
+> In survival analysis we are doing kitchen statistics, not cozy stuff anymore.
+
+> There was a smart guy Akaike, he invented something and named it AIC. Later he invented something again but A was gone so he called it BIC.
+
+> Rejecting What you want is a dangerous game.
+
+> In real life you dont care about the statistical result, looking with your eyes is better.
+
+> This is the so called partial Likelihood for Cox regression which is not a likelihood at all.
+
+> Did you consider numerical maximization instead of EM ?
+
+> The EM algorithm is very important and will follow you in your hidden Markov models lecture.
+
+> 17 years of research, but i never ever implemented or used the EM algorithm for hidden Markov models.
+
+> A phase-type distribution is the distribution of a killing time in a finite-state Markov chain.
+
+
